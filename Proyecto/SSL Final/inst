@@ -1,0 +1,10 @@
+
+--Para el cliente
+java -Djavax.net.ssl.trustStore=mySrvKeystore -Djavax.net.ssl.trustStorePassword=musesqns Cliente
+
+--Para el servidor.
+java -Djavax.net.ssleyStore=mySrvKeystore -Djavax.net.ssl.keyStorePassword=musesqns Servidor
+
+--Para generar el store de claves
+--Genera un certificado RSA
+keytool -genkey -keystore mySrvKeystore -keyalg RSA
